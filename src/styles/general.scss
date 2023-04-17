@@ -1,0 +1,15 @@
+@use "./partials/variables" as *;
+
+@import "bootstrap/scss/bootstrap";
+
+@import "@fontsource/montserrat";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: $text-color;
+    background-color: $bg-color;
+  }
+
+img {
+  max-width: 100%;
+}
