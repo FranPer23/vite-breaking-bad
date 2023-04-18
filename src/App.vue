@@ -15,14 +15,10 @@ export default {
     };
   },
   mounted() {
-    axios.get(store.apiURL).then((resp) => {
-      this.store.characters = resp.data.results;
-    });
-
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
       .then((resp) => {
-        const myData = resp.data.data;
+        this.store.cards = resp.data.data;
       });
   },
 };

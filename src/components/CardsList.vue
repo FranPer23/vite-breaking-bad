@@ -18,8 +18,8 @@ export default {
 <template>
   <div class="container">
     <div class="row row-cols-4 g-4">
-      <div class="col" v-for="card in store.cards" :key="cards.index">
-        <SingleCard :card="card" />
+      <div class="col" v-for="card in store.cards" :key="card.id">
+        <SingleCard :cardObj="card" />
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
 .container {
   margin-top: 3rem;
   background-color: white;
-  height: 500px;
-  width: 80%;
+  height: auto;
+  width: 70%;
 }
 </style>

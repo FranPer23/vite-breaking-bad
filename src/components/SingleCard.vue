@@ -1,15 +1,22 @@
 <script>
 export default {
-  name: "Card",
+  name: "SingleCard",
   props: {
-    card: Object,
+    cardObj: Object,
   },
 };
 </script>
 
 <template>
-  <div class="text-center">
-    <img class="" :src="card.image" alt="" />
-    <h3 class="mb-3">{{ card.name }}</h3>
+  <div class="card">
+    <img
+      class="card-img-top"
+      :src="cardObj.card_images[0].image_url_cropped"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ cardObj.name }}</h5>
+      <p class="card-text">{{ cardObj.archetype }}</p>
+    </div>
   </div>
 </template>
